@@ -442,9 +442,9 @@ function placeOrder(event) {
         total.toLocaleString();
 
 
-    // Your WhatsApp number
+    // Updated WhatsApp number
     const whatsappNumber =
-        "923189638629";
+        "923499270314";
 
 
     const whatsappURL =
