@@ -343,7 +343,7 @@ function checkout() {
 
 
 // ==============================
-// Place Order
+// Place Order - WhatsApp
 // ==============================
 
 function placeOrder(event) {
@@ -359,13 +359,13 @@ function placeOrder(event) {
 
 
     const name =
-        document.getElementById("name").value;
+        document.getElementById("name").value.trim();
 
     const phone =
-        document.getElementById("phone").value;
+        document.getElementById("phone").value.trim();
 
     const address =
-        document.getElementById("address").value;
+        document.getElementById("address").value.trim();
 
     const payment =
         document.getElementById("payment").value;
@@ -379,19 +379,85 @@ function placeOrder(event) {
     }
 
 
-    alert(
-        "Order placed successfully! " +
-        "Thank you, " +
-        name +
-        ". Your order will be processed soon."
+    let message =
+        "🛍️ ShopEase New Order\n\n";
+
+    message +=
+        "Customer Details\n";
+
+    message +=
+        "Name: " + name + "\n";
+
+    message +=
+        "Phone: " + phone + "\n";
+
+    message +=
+        "Address: " + address + "\n";
+
+    message +=
+        "Payment: " + payment + "\n\n";
+
+
+    message +=
+        "Order Details\n";
+
+
+    let subtotal = 0;
+
+
+    cart.forEach(product => {
+
+        const productTotal =
+            product.price * product.quantity;
+
+        subtotal += productTotal;
+
+
+        message +=
+            product.name +
+            " x " +
+            product.quantity +
+            " - Rs. " +
+            productTotal.toLocaleString() +
+            "\n";
+    });
+
+
+    const delivery = 500;
+
+    const total =
+        subtotal + delivery;
+
+
+    message +=
+        "\nSubtotal: Rs. " +
+        subtotal.toLocaleString();
+
+    message +=
+        "\nDelivery: Rs. " +
+        delivery.toLocaleString();
+
+    message +=
+        "\nTotal: Rs. " +
+        total.toLocaleString();
+
+
+    // WhatsApp number
+    const whatsappNumber =
+        "923189638629";
+
+
+    const whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
     );
-
-
-    cart = [];
-
-    localStorage.removeItem("cart");
-
-    window.location.href = "index.html";
 }
 
 
