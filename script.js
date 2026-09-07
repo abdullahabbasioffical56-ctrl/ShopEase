@@ -442,7 +442,7 @@ function placeOrder(event) {
         total.toLocaleString();
 
 
-    // WhatsApp number
+    // Your WhatsApp number
     const whatsappNumber =
         "923189638629";
 
@@ -454,10 +454,8 @@ function placeOrder(event) {
         encodeURIComponent(message);
 
 
-    window.open(
-        whatsappURL,
-        "_blank"
-    );
+    // Open WhatsApp in the same tab
+    window.location.href = whatsappURL;
 }
 
 
@@ -566,7 +564,6 @@ function loadCategoryFromURL() {
     }
 
 
-    // Wait until the Products page is ready
     const products =
         document.querySelectorAll(".product-card");
 
