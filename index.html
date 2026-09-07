@@ -1,0 +1,205 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Online Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <h1>ShopEase</h1>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html">Cart</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Shop Everything You Love</h2>
+
+            <p>
+                Discover quality products, great prices and a simple
+                shopping experience at ShopEase.
+            </p>
+
+            <a href="products.html" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+
+    <!-- Shop By Category -->
+    <section class="categories">
+        <h2>Shop By Category</h2>
+
+        <div class="category-grid">
+
+            <div class="category-card" onclick="openCategory('mobile')">
+                <h3>📱 Mobiles</h3>
+                <p>Latest smartphones and accessories</p>
+            </div>
+
+            <div class="category-card" onclick="openCategory('laptop')">
+                <h3>💻 Laptops</h3>
+                <p>Powerful laptops for work and study</p>
+            </div>
+
+            <div class="category-card" onclick="openCategory('headphone')">
+                <h3>🎧 Headphones</h3>
+                <p>Enjoy clear and powerful sound</p>
+            </div>
+
+            <div class="category-card" onclick="openCategory('watch')">
+                <h3>⌚ Smart Watches</h3>
+                <p>Smart technology for your daily life</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Featured Products -->
+    <section class="products">
+        <h2>Featured Products</h2>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="product_images/smartphone.jfif"
+                     alt="Smartphone Pro">
+
+                <h3>Smartphone Pro</h3>
+
+                <p>Rs. 85,000</p>
+
+                <button onclick="addToCart(
+                    'Smartphone Pro',
+                    85000,
+                    'product_images/smartphone.jfif'
+                )">
+                    Add to Cart
+                </button>
+            </div>
+
+
+            <div class="product-card">
+                <img src="product_images/laptop.jfif"
+                     alt="Ultra Laptop">
+
+                <h3>Ultra Laptop</h3>
+
+                <p>Rs. 145,000</p>
+
+                <button onclick="addToCart(
+                    'Ultra Laptop',
+                    145000,
+                    'product_images/laptop.jfif'
+                )">
+                    Add to Cart
+                </button>
+            </div>
+
+
+            <div class="product-card">
+                <img src="product_images/Headphone.jfif"
+                     alt="Wireless Headphones">
+
+                <h3>Wireless Headphones</h3>
+
+                <p>Rs. 8,500</p>
+
+                <button onclick="addToCart(
+                    'Wireless Headphones',
+                    8500,
+                    'product_images/Headphone.jfif'
+                )">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Why Shop With Us -->
+    <section class="why-shop">
+        <h2>Why Shop With Us?</h2>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <div class="why-icon">🚚</div>
+                <h3>Fast Delivery</h3>
+                <p>
+                    Get your orders delivered quickly and safely.
+                </p>
+            </div>
+
+
+            <div class="why-card">
+                <div class="why-icon">🔒</div>
+                <h3>Secure Payment</h3>
+                <p>
+                    Your payment information is handled securely.
+                </p>
+            </div>
+
+
+            <div class="why-card">
+                <div class="why-icon">⭐</div>
+                <h3>Quality Products</h3>
+                <p>
+                    We offer useful and reliable products for everyone.
+                </p>
+            </div>
+
+
+            <div class="why-card">
+                <div class="why-icon">📞</div>
+                <h3>Customer Support</h3>
+                <p>
+                    We are here to help you with your shopping needs.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Simple Shopping Message -->
+    <section class="shopping-message">
+        <h2>Everything You Need in One Place</h2>
+
+        <p>
+            Browse our products, choose your favorite items and
+            enjoy a simple online shopping experience.
+        </p>
+
+        <a href="products.html" class="btn">Explore Products</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <h3>ShopEase</h3>
+
+        <p>Your trusted online shopping store.</p>
+
+        <p>© 2026 ShopEase. All Rights Reserved.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
